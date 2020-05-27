@@ -157,8 +157,6 @@ def prepare_dataset(data_pattern, shuffle=False):
     return dataset.prefetch(BATCH_SIZE)
 
 
-
-# TODO A PRIORI KNOWLEDGE!
 CINIC_MEAN_RGB = np.array([0.47889522, 0.47227842, 0.43047404])
 CINIC_10_CLASSES = ['airplane', 'automobile', 'bird', 'cat',
                     'deer', 'dog', 'frog', 'horse', 'ship',

@@ -54,7 +54,7 @@ def build_network(width, height, depth, classes):
     x = Dense(units=512)(x)
     x = ReLU()(x)
     x = BatchNormalization(axis=-1)(x)
-    x = Dropout(rate=0.5)(x)
+    x = Dropout(rate=0.25)(x)
 
     x = Dense(units=classes)(x)
     output = Activation('sigmoid')(x)
@@ -144,7 +144,7 @@ print(f'Test accuracy: {result[1]}')
 test_image = np.expand_dims(X_test[0], axis=0)
 probabilities = model.predict(test_image)[0]
 
-for (label, p) in zip(mlb.classes_, probabilities):
+for label, p in zip(mlb.classes_, probabilities):
     print(f'{label}: {p * 100:.2f}%')
 
 ground_truth_labels = np.expand_dims(y_test[0], axis=0)
