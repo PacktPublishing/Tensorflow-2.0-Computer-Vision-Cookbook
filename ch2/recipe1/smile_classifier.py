@@ -1,22 +1,12 @@
-import glob
 import os
 import pathlib
 
+import glob
 import numpy as np
 from sklearn.model_selection import train_test_split
 from tensorflow.keras import Model
-from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import ELU
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import Input
-from tensorflow.keras.layers import MaxPooling2D
-from tensorflow.keras.losses import BinaryCrossentropy
-from tensorflow.keras.optimizers import RMSprop
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.layers import *
+from tensorflow.keras.preprocessing.image import *
 
 
 def load_images_and_labels(image_paths):
@@ -99,8 +89,8 @@ print(f'Non-smile images: {total_negative}')
                                     random_state=999)
 
 model = build_network()
-model.compile(loss=BinaryCrossentropy(),
-              optimizer=RMSprop(),
+model.compile(loss='binary_crossentropy',
+              optimizer='rmsprop',
               metrics=['accuracy'])
 
 BATCH_SIZE = 32

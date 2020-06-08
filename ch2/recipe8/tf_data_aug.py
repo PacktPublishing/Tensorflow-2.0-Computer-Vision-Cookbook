@@ -1,24 +1,15 @@
 import os
 import pathlib
-from glob import glob
 
 import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 import tensorflow_docs as tfdocs
 import tensorflow_docs.plots
+from glob import glob
 from sklearn.model_selection import train_test_split
-from tensorflow.keras import Model
-from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import Input
-from tensorflow.keras.layers import MaxPooling2D
-from tensorflow.keras.layers import ReLU
-from tensorflow.keras.layers import Softmax
-from tensorflow.keras.optimizers import RMSprop
+from tensorflow.keras.layers import *
+from tensorflow.keras.models import Model
 
 AUTOTUNE = tf.data.experimental.AUTOTUNE
 
@@ -133,7 +124,7 @@ test_dataset = (prepare_dataset(test_paths)
 EPOCHS = 40
 model = build_network(64, 64, 3, len(CLASSES))
 model.compile(loss='categorical_crossentropy',
-              optimizer=RMSprop(),
+              optimizer='rmsprop',
               metrics=['accuracy'])
 history = model.fit(train_dataset,
                     validation_data=test_dataset,
@@ -155,7 +146,7 @@ test_dataset = (prepare_dataset(test_paths)
 
 model = build_network(64, 64, 3, len(CLASSES))
 model.compile(loss='categorical_crossentropy',
-              optimizer=RMSprop(),
+              optimizer='rmsprop',
               metrics=['accuracy'])
 history = model.fit(train_dataset,
                     validation_data=test_dataset,

@@ -2,8 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow_hub as hub
 from tensorflow.keras import Sequential
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.preprocessing.image import *
 from tensorflow.keras.utils import get_file
 
 classifier_url = ('https://tfhub.dev/google/imagenet/'

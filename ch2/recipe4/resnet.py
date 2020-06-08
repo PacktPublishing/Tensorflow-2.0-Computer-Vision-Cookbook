@@ -1,21 +1,11 @@
 import os
-import tarfile
 
 import numpy as np
+import tarfile
 import tensorflow as tf
 from tensorflow.keras.callbacks import ModelCheckpoint
-from tensorflow.keras.layers import Add
-from tensorflow.keras.layers import AveragePooling2D
-from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import Input
-from tensorflow.keras.layers import ReLU
-from tensorflow.keras.layers import Softmax
-from tensorflow.keras.models import Model
-from tensorflow.keras.models import load_model
-from tensorflow.keras.optimizers import RMSprop
+from tensorflow.keras.layers import *
+from tensorflow.keras.models import *
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras.utils import get_file
 
@@ -200,7 +190,7 @@ if TRAIN:
                          filters=(64, 64, 128, 256),
                          reg=5e-3)
     model.compile(loss='categorical_crossentropy',
-                  optimizer=RMSprop(),
+                  optimizer='rmsprop',
                   metrics=['accuracy'])
 
     model_checkpoint_callback = ModelCheckpoint(

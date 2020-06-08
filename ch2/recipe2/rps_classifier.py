@@ -1,20 +1,13 @@
-import glob
 import os
 import pathlib
 
+import glob
 import numpy as np
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from tensorflow.keras import Model
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import Input
-from tensorflow.keras.layers import ReLU
-from tensorflow.keras.layers import Softmax
+from tensorflow.keras.layers import *
 from tensorflow.keras.losses import CategoricalCrossentropy
-from tensorflow.keras.optimizers import Adam
 
 CLASSES = ['rock', 'paper', 'scissors']
 AUTOTUNE = tf.data.experimental.AUTOTUNE
@@ -100,7 +93,7 @@ test_dataset = prepare_dataset(test_paths,
 
 model = build_network()
 model.compile(loss=CategoricalCrossentropy(from_logits=True),
-              optimizer=Adam(),
+              optimizer='adam',
               metrics=['accuracy'])
 
 EPOCHS = 250

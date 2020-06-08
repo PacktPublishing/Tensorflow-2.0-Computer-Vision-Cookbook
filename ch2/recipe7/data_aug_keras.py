@@ -1,28 +1,16 @@
 import os
 import pathlib
-from glob import glob
 
 import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow_docs as tfdocs
 import tensorflow_docs.plots
+from glob import glob
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelBinarizer
-from tensorflow.keras import Model
-from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import Input
-from tensorflow.keras.layers import MaxPooling2D
-from tensorflow.keras.layers import ReLU
-from tensorflow.keras.layers import Softmax
-from tensorflow.keras.optimizers import RMSprop
-from tensorflow.keras.preprocessing.image import \
-    ImageDataGenerator
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.layers import *
+from tensorflow.keras.models import Model
+from tensorflow.keras.preprocessing.image import *
 
 
 def load_images_and_labels(image_paths, target_size=(64, 64)):
@@ -118,7 +106,7 @@ EPOCHS = 40
 BATCH_SIZE = 64
 model = build_network(64, 64, 3, len(classes))
 model.compile(loss='categorical_crossentropy',
-              optimizer=RMSprop(),
+              optimizer='rmsprop',
               metrics=['accuracy'])
 
 history = model.fit(X_train, y_train,
@@ -133,7 +121,7 @@ plot_model_history(history, 'accuracy', 'normal')
 
 model = build_network(64, 64, 3, len(classes))
 model.compile(loss='categorical_crossentropy',
-              optimizer=RMSprop(),
+              optimizer='rmsprop',
               metrics=['accuracy'])
 
 augmenter = ImageDataGenerator(horizontal_flip=True,
