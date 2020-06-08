@@ -3,8 +3,7 @@ from sklearn.preprocessing import LabelBinarizer
 from tensorflow.keras import Input
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.layers import Dense
-from tensorflow.keras.models import Model
-from tensorflow.keras.models import Sequential
+from tensorflow.keras.models import *
 
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 

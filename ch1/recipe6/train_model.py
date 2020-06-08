@@ -5,18 +5,9 @@ import tensorflow_docs as tfdocs
 import tensorflow_docs.plots
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelBinarizer
-from tensorflow.keras import Model
 from tensorflow.keras.datasets import fashion_mnist as fm
-from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import ELU
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import Input
-from tensorflow.keras.layers import MaxPooling2D
-from tensorflow.keras.layers import Softmax
-from tensorflow.keras.models import load_model
+from tensorflow.keras.layers import *
+from tensorflow.keras.models import *
 from tensorflow.keras.utils import plot_model
 
 

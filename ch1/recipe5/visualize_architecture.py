@@ -1,14 +1,6 @@
 from PIL import Image
-from tensorflow.keras import Model
-from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import Input
-from tensorflow.keras.layers import LeakyReLU
-from tensorflow.keras.layers import MaxPooling2D
-from tensorflow.keras.layers import Softmax
+from tensorflow.keras.layers import *
+from tensorflow.keras.models import Model
 from tensorflow.keras.utils import plot_model
 
 input_layer = Input(shape=(64, 64, 3), name='input_layer')
