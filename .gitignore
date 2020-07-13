@@ -172,3 +172,5 @@ pip-selfcheck.json
 *.hdf5
 .idea
 venv
+
+**/__pycache__
