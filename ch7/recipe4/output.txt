@@ -1,0 +1,81 @@
+0. 3740
+Actual caption: a big black dog laying on a bed with white covers
+Predicted caption: couple of dogs on a bed with a black suitcase on
+------
+1. 832
+Actual caption: a boys foot on an skateboard sitting there
+Predicted caption: person on a doughnut on the table
+------
+2. 2320
+Actual caption: a white toilet sitting between a bath tub and a sink
+Predicted caption: bathroom with a shower made of someones head
+------
+3. 1822
+Actual caption: a traffic light mounted to the side of a building
+Predicted caption: large train drives in front of a road
+------
+4. 5788
+Actual caption: a whole bunch of bananas cut up in a large bowl
+Predicted caption: plantains sitting on a large meal
+------
+5. 2185
+Actual caption: a dessert plate with a variety of tea cakes
+Predicted caption: big barbecue sandwich sit near the paper of food
+------
+6. 2955
+Actual caption: a boy playing a soccer game in uniform
+Predicted caption: group of young people in a person standing on grass after a soccer field
+------
+7. 317
+Actual caption: a man paddling a surfboard on a lake
+Predicted caption: man <unk> in a wet suit walks on top of water
+------
+8. 5904
+Actual caption: this screen seems to be used for a variety of things
+Predicted caption: lego player on a computer and a remote on it
+------
+9. 134
+Actual caption: a man in a suit does a dance pose near a young child
+Predicted caption: person in a nice umbrella in a tropical bow cell phone
+------
+10. 3448
+Actual caption: a gathering of people around a table full of food
+Predicted caption: bunch of food are sitting out on the street
+------
+11. 3146
+Actual caption: a white fence with ivy growing along it and a large tree outside of the fence with a sign on it
+Predicted caption: giant yellow photo of glasses near a tree
+
+------
+12. 5544
+Actual caption: a fire hydrant painted red white and blue are on the curb
+Predicted caption: fire hydrant is painted sign into the side of a yellow car
+------
+13. 4379
+Actual caption: the big ben clock tower towering over london
+Predicted caption: traveling on the street with cars on the street
+------
+14. 3739
+Actual caption: two people pose for a photo while holding pizza
+Predicted caption: group of people sitting down at a while in her
+------
+15. 1941
+Actual caption: the skier is skiing under the lift holding a bunch of people
+Predicted caption: fire hydrant and snow near the street
+------
+16. 2445
+Actual caption: a cat laying with its head on someone's shoe
+Predicted caption: adorable cat playing with a snowy exhibit looking
+------
+17. 704
+Actual caption: a puppy has a toy piece of pizza in its mouth
+Predicted caption: small dog sitting on top of a <unk> on a piece of food
+------
+18. 3493
+Actual caption: a case of ice treats and soda beside a small refrigerator
+Predicted caption: coffee cup features the side of a pink hanging on a pink juice
+------
+19. 5845
+Actual caption: a large stuffed bear sits in the driver's seat of a vintage red vehicle
+Predicted caption: giant cow sitting in stuffed animals from a car
+
