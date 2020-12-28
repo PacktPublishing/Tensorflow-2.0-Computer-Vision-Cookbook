@@ -73,11 +73,19 @@ def plot_original_vs_generated(original, generated):
                           np.hstack(images[10:15])])
 
     def add_text(image, text, position):
+        pt1 = position
+        pt2 = (pt1[0] + 10 + (len(text) * 22),
+               pt1[1] - 45)
+        cv2.rectangle(image,
+                      pt1,
+                      pt2,
+                      (255, 255, 255),
+                      -1)
         cv2.putText(image, text,
                     position,
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-                    fontScale=3.5,
-                    color=(0, 255, 255),
+                    fontScale=1.3,
+                    color=(0, 0, 0),
                     thickness=4)
 
     original = stack(original)

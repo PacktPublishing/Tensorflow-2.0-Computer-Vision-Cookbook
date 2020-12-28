@@ -64,6 +64,39 @@ def build_autoencoder(input_shape=(28, 28, 1),
     return encoder_model, decoder_model, autoencoder_model
 
 
+# def plot_original_vs_generated(original, generated):
+#     num_images = 15
+#     sample = np.random.randint(0, len(original), num_images)
+#
+#     def stack(data):
+#         images = data[sample]
+#         return np.vstack([np.hstack(images[:5]),
+#                           np.hstack(images[5:10]),
+#                           np.hstack(images[10:15])])
+#
+#     def add_text(image, text, position):
+#         cv2.putText(image, text,
+#                     position,
+#                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+#                     fontScale=3.5,
+#                     color=(0, 255, 255),
+#                     thickness=4)
+#
+#     original = stack(original)
+#     generated = stack(generated)
+#
+#     mosaic = np.vstack([original,
+#                         generated])
+#     mosaic = cv2.resize(mosaic, (860, 860),
+#                         interpolation=cv2.INTER_AREA)
+#     mosaic = cv2.cvtColor(mosaic, cv2.COLOR_GRAY2BGR)
+#
+#     add_text(mosaic, 'Original', (50, 100))
+#     add_text(mosaic, 'Generated', (50, 520))
+#
+#     cv2.imshow('Mosaic', mosaic)
+#     cv2.waitKey(0)
+
 def plot_original_vs_generated(original, generated):
     num_images = 15
     sample = np.random.randint(0, len(original), num_images)
@@ -75,11 +108,19 @@ def plot_original_vs_generated(original, generated):
                           np.hstack(images[10:15])])
 
     def add_text(image, text, position):
+        pt1 = position
+        pt2 = (pt1[0] + 10 + (len(text) * 22),
+               pt1[1] - 45)
+        cv2.rectangle(image,
+                      pt1,
+                      pt2,
+                      (255, 255, 255),
+                      -1)
         cv2.putText(image, text,
                     position,
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-                    fontScale=3.5,
-                    color=(0, 255, 255),
+                    fontScale=1.3,
+                    color=(0, 0, 0),
                     thickness=4)
 
     original = stack(original)
@@ -91,12 +132,11 @@ def plot_original_vs_generated(original, generated):
                         interpolation=cv2.INTER_AREA)
     mosaic = cv2.cvtColor(mosaic, cv2.COLOR_GRAY2BGR)
 
-    add_text(mosaic, 'Original', (50, 100))
-    add_text(mosaic, 'Generated', (50, 520))
+    add_text(mosaic, 'Original', (20, 80))
+    add_text(mosaic, 'Generated', (20, 500))
 
     cv2.imshow('Mosaic', mosaic)
     cv2.waitKey(0)
-
 
 (X_train, _), (X_test, _) = fashion_mnist.load_data()
 
