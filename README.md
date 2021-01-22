@@ -26,6 +26,7 @@ alt="https://www.packtpub.com/" border="5" /></a>
 All of the code is organized into folders. For example, Chapter01.
 
 The code will look like the following:
+
 sequential_model = Sequential()
 
 sequential_model.add(Dense(256, input_shape=(28 * 28 * 1,), 
