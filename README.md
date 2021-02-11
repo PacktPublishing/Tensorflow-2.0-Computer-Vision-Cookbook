@@ -27,16 +27,23 @@ All of the code is organized into folders. For example, Chapter01.
 
 The code will look like the following:
 
-sequential_model = Sequential()
+```
+def build_network():
+    input_layer = Input(shape=(32, 32, 1))
+    x = Conv2D(filters=32,
+               kernel_size=(3, 3),
+               padding='same',
+               strides=(1, 1))(input_layer)
+    x = ReLU()(x)
+    x = Dropout(rate=0.5)(x)
 
-sequential_model.add(Dense(256, input_shape=(28 * 28 * 1,), 
-                           activation='sigmoid'))
-                           
-sequential_model.add(Dense(128, activation='sigmoid'))
+    x = Flatten()(x)
+    x = Dense(units=3)(x)
+    output = Softmax()(x)
 
-sequential_model.add(Dense(10, activation='softmax'))
+    return Model(inputs=input_layer, outputs=output)
 
-
+```
 **Following is what you need for this book:**
 This book is for computer vision developers and engineers, as well as deep learning practitioners looking for go-to solutions to various problems that commonly arise in computer vision. You will discover how to employ modern machine learning (ML) techniques and deep learning architectures to perform a plethora of computer vision tasks. Basic knowledge of Python programming and computer vision is required.
 
@@ -49,7 +56,7 @@ With the following software and hardware list you can run all code files present
 | 1-12    | Python 3.6+, TensorFlow 2.3+         | Mac OS X, and Linux (Debian Based) |
 
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [https://static.packt-cdn.com/downloads/9781838829131_ColorImages.pdf] (Graphics Bundle Link).
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781838829131_ColorImages.pdf)
 
 ## Code in Action
 
