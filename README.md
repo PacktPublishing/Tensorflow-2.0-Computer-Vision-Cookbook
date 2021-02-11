@@ -1,8 +1,8 @@
-# TensorFlow 2.0 Computer Vision Cookbook
+# Tensorflow 2.0 Computer Vision Cookbook
 
 <a href="https://https://www.packtpub.com/in/data/tensorflow-2-0-computer-vision-cookbook"><img src="https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/9/7/9781838829131-original_98.jpeg" alt="Book Name" height="256px" align="right"></a>
 
-This is the code repository for [TensorFlow 2.0 Computer Vision Cookbook](https://github.com/PacktPublishing/Tensorflow-2.0-Computer-Vision-Cookbook), published by Packt.
+This is the code repository for [Tensorflow 2.0 Computer Vision Cookbook](https://github.com/PacktPublishing/Tensorflow-2.0-Computer-Vision-Cookbook), published by Packt.
 
 **Implement machine learning solutions to overcome various computer vision challenges**
 
