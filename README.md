@@ -55,14 +55,14 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 Click on the following link to see the Code in Action:
 
-[https://bit.ly/2NmdZ5G] (www.youtube.com/URL)
+https://bit.ly/2NmdZ5G
 
 ### Related products <Other books you may enjoy>
 * Mastering Computer Vision with TensorFlow 2.x [[Packt]](https://www.packtpub.com/product/mastering-computer-vision-with-tensorflow-2-x/9781838827069) [[Amazon]](https://www.amazon.com/dp/1838827064)
 
 * Applied Deep Learning and Computer Vision for Self-Driving Cars [[Packt]](https://www.packtpub.com/product/applied-deep-learning-and-computer-vision-for-self-driving-cars/9781838646301) [[Amazon]](https://www.amazon.com/dp/1838646302)
 
-## Get to Know the Author(s)
+## Get to Know the Author
 **Jesús Martínez**
 He is the founder of the computer vision e-learning site DataSmarts. He is a computer vision expert and has worked on a wide range of projects in the field, such as a piece of people-counting software fed with images coming from an RGB camera and a depth sensor, using OpenCV and TensorFlow. 
 He developed a self-driving car in a simulation, using a convolutional neural network created with TensorFlow, that worked solely with visual inputs. Also, he implemented a pipeline that uses several advanced computer vision techniques to track lane lines on the road, as well as providing extra information such as curvature degree.
